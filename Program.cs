@@ -1,6 +1,6 @@
 using System;
 
-class ProjectName
+class Bakery
 {
     public static void OrderGoods()
     {
@@ -8,11 +8,12 @@ class ProjectName
     string answer = Console.ReadLine();
     if (answer == "Y" || answer == "y")
     {
-        Console.WriteLine("How many loaves of bread? (Please enter a number)")
+        Console.WriteLine("How many loaves of bread? (Please enter a number)");
         string orderedLoaves = Console.ReadLine();
-        Console.WriteLine("How many pastries? (Please enter a number)")
+        Console.WriteLine("How many pastries? (Please enter a number)");
         string orderedPastries = Console.ReadLine();
     }
+}
 
     public static void Main()
     {
@@ -20,5 +21,7 @@ class ProjectName
         Console.WriteLine("Menu:");
         Console.WriteLine("Loaf of Bread - $5   OR   Buy two, get one free");
         Console.WriteLine("Pastry - $2   OR   Three for $5");
+
+        OrderGoods();
     }
 }

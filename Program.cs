@@ -1,7 +1,11 @@
 using System;
+using BakeryItems;
 
 class Bakery
 {
+    private static Bread breadOrdered = new Bread ();
+    private static Pastry pastriesOrdered = new Pastry();
+
     private static void OrderBread()
     {
         Console.WriteLine("How many loaves of bread? (Please enter a number)");
@@ -17,6 +21,18 @@ class Bakery
 
     int intOrderedPastries = int.Parse(orderedPastries);
 }
+    private static void CalculateTotalPrice()
+    {
+        breadOrdered.GetTotalPrice();
+        pastriesOrdered.GetTotalPrice();
+    }
+
+    private static void DisplayUsersTotal()
+    {
+        Console.WriteLine("Your total is:" );
+        Console.WriteLine($" ${breadOrdered.FinalPrice} + ${pastriesOrdered.FinalPrice}");
+    }
+
     public static void Welcome()
     {
         Console.WriteLine("Welcome to Pierre's Bakery!");
@@ -35,6 +51,7 @@ class Bakery
         {
             OrderBread();
             OrderPastry();
+            CalculateTotalPrice();
         }
 
     }

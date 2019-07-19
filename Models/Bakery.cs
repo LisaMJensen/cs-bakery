@@ -15,6 +15,7 @@ class Bread
     {
         AmountOrdered = 0;
         Price = 0;
+        FinalPrice = 0;
     }
 
     public void GetTotalPrice()
@@ -28,11 +29,13 @@ class Pastry
 {
     public int AmountOrdered { get; set; }
     public int Price { get; set; }
+    public int FinalPrice { get; set; }
 
     public Pastry()
     {
         AmountOrdered = 0;
         Price = 0;
+        FinalPrice = 0;
     }
 
     public void GetTotalPrice()

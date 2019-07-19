@@ -5,6 +5,8 @@ class Bakery
 {
     private static Bread breadOrdered = new Bread ();
     private static Pastry pastriesOrdered = new Pastry();
+    private static int intOrderedLoaves { get; set; }
+    private static int intOrderedPastries { get; set; }
 
     private static void OrderBread()
     {
@@ -12,7 +14,7 @@ class Bakery
         string orderedLoaves = Console.ReadLine();
 
         int intOrderedLoaves = int.Parse(orderedLoaves);
-}
+    }
 
     private static void OrderPastry()
     {
@@ -20,17 +22,23 @@ class Bakery
     string orderedPastries = Console.ReadLine();
 
     int intOrderedPastries = int.Parse(orderedPastries);
-}
+    }
+
     private static void CalculateTotalPrice()
     {
+        breadOrdered.AmountOrdered = intOrderedLoaves;
+        pastriesOrdered.AmountOrdered = intOrderedPastries;
+
         breadOrdered.GetTotalPrice();
         pastriesOrdered.GetTotalPrice();
     }
 
     private static void DisplayUsersTotal()
     {
+        int total = breadOrdered.FinalPrice + pastriesOrdered.FinalPrice;
+
         Console.WriteLine("Your total is:" );
-        Console.WriteLine($" ${breadOrdered.FinalPrice} + ${pastriesOrdered.FinalPrice}");
+        Console.WriteLine($" ${total}");
     }
 
     public static void Welcome()
@@ -52,6 +60,7 @@ class Bakery
             OrderBread();
             OrderPastry();
             CalculateTotalPrice();
+            DisplayUsersTotal();
         }
 
     }

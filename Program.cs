@@ -8,23 +8,25 @@ class Bakery
     private static int intOrderedLoaves { get; set; }
     private static int intOrderedPastries { get; set; }
 
-    private static void OrderBread()
+    private static int OrderBread()
     {
         Console.WriteLine("How many loaves of bread? (Please enter a number)");
         string orderedLoaves = Console.ReadLine();
 
         int intOrderedLoaves = int.Parse(orderedLoaves);
+        return intOrderedLoaves;
     }
 
-    private static void OrderPastry()
+    private static int OrderPastry()
     {
     Console.WriteLine("How many pastries? (Please enter a number)");
     string orderedPastries = Console.ReadLine();
 
     int intOrderedPastries = int.Parse(orderedPastries);
+    return intOrderedPastries;
     }
 
-    private static void CalculateTotalPrice()
+    private static void CalculateTotalPrice(int intOrderedLoaves , int intOrderedPastries)
     {
         breadOrdered.AmountOrdered = intOrderedLoaves;
         pastriesOrdered.AmountOrdered = intOrderedPastries;
@@ -57,9 +59,9 @@ class Bakery
         string answer = Console.ReadLine();
         if (answer == "Y" || answer == "y")
         {
-            OrderBread();
-            OrderPastry();
-            CalculateTotalPrice();
+            int OrderedLoaves = OrderBread();
+            int OrderedPastry = OrderPastry();
+            CalculateTotalPrice(OrderedLoaves , OrderedPastry);
             DisplayUsersTotal();
         }
 

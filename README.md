@@ -11,9 +11,8 @@ _This console application prompts the user to enter the number of bread and past
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **BEHAVIOR** | INPUT | OUTPUT |
-| **BEHAVIOR** | INPUT | OUTPUT |
-| **BEHAVIOR** | INPUT | OUTPUT |
+| User Inputs numbers for the amount of bread and pastries they want to order  | "7","7" | "(7 , 7)" |
+| User's numbers are calculated into their total bill | "7","7" | "$37" |
 
 ## Setup/Installation Requirements
 

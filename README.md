@@ -1,4 +1,4 @@
-# Bagheera's Bakery
+
 
 #### _A C# console application for ordering from a bakery - July 19, 2019_
 

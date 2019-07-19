@@ -18,7 +18,7 @@ _This console application prompts the user to enter the number of bread and past
 
 * _Clone the following github repository to view the code and open the html file in a web browser: https://github.com/LisaMJensen/cs-bakery  ._
 
-*_Open the application in your console and follow the prompts it gives _
+*_Open the application in your console and follow the prompts it gives ._
 
 ## Known Bugs
 * No known bugs at this time.

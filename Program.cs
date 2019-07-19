@@ -8,13 +8,17 @@ class Bakery
     string answer = Console.ReadLine();
     if (answer == "Y" || answer == "y")
     {
+
+    private static void OrderBread()
         Console.WriteLine("How many loaves of bread? (Please enter a number)");
         string orderedLoaves = Console.ReadLine();
-        Console.WriteLine("How many pastries? (Please enter a number)");
-        string orderedPastries = Console.ReadLine();
-    }
 }
 
+
+    private static void OrderPastry()
+    Console.WriteLine("How many pastries? (Please enter a number)");
+    string orderedPastries = Console.ReadLine();
+}
     public static void Main()
     {
         Console.WriteLine("Welcome to Pierre's Bakery!");
